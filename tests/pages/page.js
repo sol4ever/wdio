@@ -1,5 +1,6 @@
 export default class Page {
     open(path){
-        browser.url(path);
+        const appUrl = new URL(path, browser.config.baseUrl)
+        return browser.url(appUrl.href)
     }
 }

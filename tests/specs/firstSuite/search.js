@@ -3,10 +3,10 @@ import inputs from "../../resources/inputs";
 
 describe('a test suite', () => {
 
-
-    it('should open google', async () => {
-        homePage.open()
-    });
+    before(()=> {
+        homePage.open();
+        browser.maximizeWindow();
+    })
 
     it('a test case', async () => {
     await homePage.insertValueIntoInputField(inputs.input);

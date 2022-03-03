@@ -13,10 +13,18 @@
         "@wdio/mocha-framework": "^7.16.13",
         "@wdio/spec-reporter": "^7.16.13",
         "chromedriver": "^97.0.0",
+        "cross-env": "^7.0.3",
         "wdio-chromedriver-service": "^7.2.6",
         "wdio-wait-for": "^2.2.1"
     },
     "scripts": {
-        "test": "wdio run wdio.conf.js"
+        "test": "wdio run wdio.conf.js",
+        "test:local:single": "set USE_LOCAL=1 && wdio run wdio.conf.js",
+        "test:prod:single": "wdio run wdio.conf.js",
+        "debug:prod:single": "set DEBUG=1 && wdio run wdio.conf.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.0",
+        "wdio": "6.0.1"
     }
 }
