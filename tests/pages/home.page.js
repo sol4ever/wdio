@@ -3,7 +3,7 @@ import Page from './page.js';
 class homePage extends Page {
 
     open() {
-        return super.open('somePage/comeSeparateTab');
+        return super.open('');
     }
 
     get searchBox() { return $('#search-q') }

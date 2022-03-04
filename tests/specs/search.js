@@ -1,5 +1,6 @@
-import homePage from "../../pages/home.page";
-import inputs from "../../resources/inputs";
+import homePage from "../pages/home.page";
+import inputs from "../resources/inputs";
+require('dotenv').config()
 
 describe('a test suite', () => {
 

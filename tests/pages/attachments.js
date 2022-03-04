@@ -1,5 +1,5 @@
 import Page from "./page";
-import 'dotenv/config';
+require('dotenv').config()
 import path from 'path';
 
 class Attachments extends Page {
@@ -14,3 +14,4 @@ class Attachments extends Page {
         input.setValue(remoteFilePath);
     }
 }
+export default new Attachments();

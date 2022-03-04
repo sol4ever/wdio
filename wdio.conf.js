@@ -1,11 +1,12 @@
-import { profileEnd } from 'console';
 import { path } from 'path';
 import { currentDateAndTime } from './tests/utilities/helpers.waits';
+require('dotenv').config()
+
 const fs = require('fs')
 
 var baseUrl = process.env.USE_LOCAL
     ? 'http://localhost:3000'
-    : 'https://google.com';
+    : 'https://www.ventusky.com/';
 
 var screenshotsDir = process.env.USE_LOCAL
     ? 'Error_Screenshots_local'
@@ -18,13 +19,13 @@ var timeout = process.env.DEBUG
 export const config = {
 
     specs: [
-        './tests/specs/**/*.js'
+        './tests/specs/*.js'
     ],
 
     suites:
     {
         positive: [
-            'tests/specs/firstSuite/search.js'
+            './tests/specs/search.js'
         ]
     },
 
