@@ -6,7 +6,7 @@ class homePage extends Page {
         return super.open('');
     }
 
-    get searchBox() { return $('#search-q') }
+    get searchBox() { return $('.et_pb_s') }
 
     async insertValueIntoInputField(value) {
         await this.searchBox.click()

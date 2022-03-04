@@ -11,6 +11,5 @@ describe('a test suite', () => {
 
     it('a test case', async () => {
     await homePage.insertValueIntoInputField(inputs.input);
-    await browser.pause(5000);
     });
 });

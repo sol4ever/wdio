@@ -6,7 +6,7 @@ const fs = require('fs')
 
 var baseUrl = process.env.USE_LOCAL
     ? 'http://localhost:3000'
-    : 'https://www.ventusky.com/';
+    : 'https://ultimateqa.com/';
 
 var screenshotsDir = process.env.USE_LOCAL
     ? 'Error_Screenshots_local'
