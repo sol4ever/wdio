@@ -1,7 +1,6 @@
-import { path } from 'path';
-import { currentDateAndTime } from './tests/utilities/helpers.waits';
-require('dotenv').config()
-
+import path from 'path';
+import { currentDateAndTime } from '././tests/utilities/helpers.timeGenerators';
+require('dotenv').config();
 const fs = require('fs')
 
 var baseUrl = process.env.USE_LOCAL
@@ -67,18 +66,19 @@ export const config = {
         timeout: timeout
     },
 
+    //Saves a screenshot of browser after test error. Checks if error screenshot-file exists. If not-it creates it.
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         if (error) {
-           const screenshotDir = path.join(__dirname, `./${screenshotsDir}`)
+            const screenshotDir = path.join(__dirname, `./${screenshotsDir}`)
 
-           if(!fs.existsSync(screenshotDir)) {
-               fs.mkdirSync(screenshotDir);
-           }
-           const filePath = path.join(
-               screenshotDir,
-               test.title.replace(/[^a-z0-9]/gi, '_').toLowerCase(),
-           )
-           await browser.saveScreenshot(filePath + currentDateAndTime()+ '.png')
+            if (!fs.existsSync(screenshotDir)) {
+                fs.mkdirSync(screenshotDir);
+            }
+            const filePath = path.join(
+                screenshotDir,
+                test.title.replace(/[^a-z0-9]/gi, '_').toLowerCase(),
+            )
+            await browser.saveScreenshot(filePath + currentDateAndTime() + '.png')
         }
     },
 

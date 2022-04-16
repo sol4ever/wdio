@@ -4,6 +4,7 @@ import path from 'path';
 
 class Attachments extends Page {
 
+    //uploading attachments from uploades file
     get attachmentButton() { return $('[class="thisClassName"]') }
 
     async uploadAttachment() {

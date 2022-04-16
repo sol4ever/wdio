@@ -2,3 +2,5 @@ node_modules
 allure-results
 allure-reports
 package-lock.json
+Error_Screenshots_local
+Error_Screenshots_prod
