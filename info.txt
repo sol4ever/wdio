@@ -1,0 +1,2 @@
+To run tests on https://ultimateqa.com/
+npm run test:prod:single

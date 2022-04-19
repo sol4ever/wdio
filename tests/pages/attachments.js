@@ -4,9 +4,9 @@ import path from 'path';
 
 class Attachments extends Page {
 
-    //uploading attachments from uploades file
     get attachmentButton() { return $('[class="thisClassName"]') }
 
+    //uploading attachments from uploades file (not used in this test project but very usefull)
     async uploadAttachment() {
         const remoteFilePath = await browser.uploadFile(path.join(__dirname, '../../uploades/file.jpeg'))
         const input = await this.attachmentButton;

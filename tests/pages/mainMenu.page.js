@@ -1,8 +1,6 @@
 import Page from './page.js';
-import phrases from '../resources/phrases.js';
-import links from '../resources/links.js';
 
-class homePage extends Page {
+class mainMenuPages extends Page {
 
     open() {
         return super.open('');
@@ -38,4 +36,4 @@ class homePage extends Page {
     }
 }
 
-export default new homePage();
+export default new mainMenuPages();

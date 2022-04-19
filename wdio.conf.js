@@ -24,7 +24,7 @@ export const config = {
     suites:
     {
         positive: [
-            './tests/specs/search.js'
+            './tests/specs/simpleTest.js'
         ]
     },
 
