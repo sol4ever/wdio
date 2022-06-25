@@ -29,9 +29,12 @@ describe('a test suite', () => {
         await mainMenuPages.openSelectedLink(phrases.elements, links.simpleElementsForAutomation);
     })
 
-    it('should open select Female checkbox and confirm it is selected', async () => {
+    it('should select Female radio button and confirm it is selected', async () => {
         await simpleElemPage.selectRadioButton();
     })
 
+    it('should select bike checkbox and confirm it is selected', async () => {
+        await simpleElemPage.selectCheckbox();
+    })
 
 });

@@ -1,12 +1,14 @@
 function CarsData(){
-    this.carVolvo = {
+    this.carOpel = {
+        brand: 'Opel',
         maxSpeed: '200',
         range: '1000',
         people: '5',
         doors: '3'
     },
 
-    this.Bmv = {
+    this.carSaab = {
+        brand: 'Saab',
         maxSpeed: '100',
         range: '500',
         people: '2',
